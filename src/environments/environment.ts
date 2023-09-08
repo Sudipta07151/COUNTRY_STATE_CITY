@@ -3,14 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
-
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+  production: false,
+  app_id:'64fab559d7acef183d4a76f0',
+  api_key:'RW54RWI5d09URDZSSlN1cFNPQnE3cHpDRXlFY0JTUmxCTE84YXRFYQ==',
+  url_endpoint:'https://dummyapi.io/data/v1',
+  country_state_city_api:'https://api.countrystatecity.in/v1',
+  countries:'/countries',
+  userlist:'/user',
+  states:'/states'
+}; 

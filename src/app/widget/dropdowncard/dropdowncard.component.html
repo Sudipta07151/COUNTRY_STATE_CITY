@@ -1,0 +1,7 @@
+<form [formGroup]="formGroup">
+  <select formControlName="dropdown" (change)="handleOnChange($event)">
+    <option *ngFor="let item of dropdownvalues">
+      {{ item.iso_code }}
+    </option>
+  </select>
+</form>

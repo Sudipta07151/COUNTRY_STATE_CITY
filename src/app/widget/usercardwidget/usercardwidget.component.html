@@ -1,0 +1,15 @@
+<ng-container
+  *ngIf="!userList || userList.length == 0; then nouser; else user"
+></ng-container>
+
+<ng-template #nouser>USER</ng-template>
+<ng-template #user>
+  <div *ngFor="let user of userList.data" [id]="user.id">
+    <p>
+      <img [src]="user.picture" alt="" />
+      <span>{{ user.title }}:</span>
+      <span>{{ user.firstName }}</span>
+      <span>{{ user.lastName }}</span>
+    </p>
+  </div>
+</ng-template>

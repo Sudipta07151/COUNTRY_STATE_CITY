@@ -1,0 +1,35 @@
+<h2>STATES</h2>
+<app-radiocard
+  [radioInputList]="radioInputList"
+  (handleClickRadioEvent)="handleClickRadioEvent($event)"
+></app-radiocard>
+<ng-container [ngSwitch]="showByDefault">
+  <div *ngSwitchCase="'ALL STATES'">
+    <app-filtercard
+      (searchValueEmit)="handleSearchValueEmit($event)"
+      [placeholderValue]="'state name'"
+    ></app-filtercard>
+    <div class="state_wrapper">
+      <ng-container *ngFor="let state of stateList">
+        <app-statecard [state]="state"></app-statecard>
+      </ng-container>
+    </div>
+  </div>
+  <div *ngSwitchCase="'STATE BY COUNTRY'">
+    <div>
+      <div>
+        <app-dropdowncard
+          *ngIf="mapDropDownISOValuesList.length != 0"
+          [dropdownvalues]="mapDropDownISOValuesList"
+          (dropdownvaluesEmit)="handledropdownvaluesEmit($event)"
+        ></app-dropdowncard>
+      </div>
+      <div class="state_wrapper">
+        <ng-container *ngFor="let state of stateListByCountry">
+          <app-statebycountrycard [state]="state"></app-statebycountrycard>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <div *ngSwitchDefault>output2</div>
+</ng-container>

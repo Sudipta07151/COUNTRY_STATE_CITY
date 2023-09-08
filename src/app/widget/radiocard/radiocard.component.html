@@ -1,0 +1,17 @@
+<form [formGroup]="formGroup">
+  <div>
+    <ng-container *ngFor="let item of radioInputList">
+      <label [for]="item.name"
+        >{{ item.name }}
+        <input
+          type="radio"
+          [id]="item.name"
+          [value]="item.name"
+          formControlName="radiocheck"
+          (change)="handleClickRadio()"
+        />
+      </label>
+    </ng-container>
+  </div>
+  <div></div>
+</form>

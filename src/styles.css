@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+p,
+label {
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-family: 'Space Mono', monospace !important;
+}
+
+h1 {
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-family: 'Space Mono', monospace !important;
+    font-size: 2rem;
+    color: rgb(72, 72, 72);
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+a {
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-family: 'Space Mono', monospace !important;
+    font-size: 1.2rem !important;
+}
+
+h2 {
+    font-family: 'Libre Franklin', sans-serif !important;
+    font-family: 'Space Mono', monospace !important;
+    font-size: 1.5rem;
+}
+
+ul {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+input[type="text"] {
+    padding: 0.6rem;
+    width: 20rem;
+    font-size: 1.2rem;
+    border: 2px solid black;
+}
+
+body {
+    background-color: #2494f4;
+}

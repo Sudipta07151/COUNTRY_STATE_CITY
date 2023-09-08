@@ -1,0 +1,10 @@
+<ng-container *ngIf="!state; then nocountry; else showcountry"></ng-container>
+<ng-template #nocountry></ng-template>
+<ng-template #showcountry let state="state">
+  <div class="state_card_wrapper">
+    <p>STATE: {{ state.name }}</p>
+    <p>LATITUDE: {{ state.latitude }}</p>
+    <p>LOGITUDE: {{ state.longitude }}</p>
+    <p>COUNTRY CODE: {{ state.country_code }}</p>
+  </div>
+</ng-template>

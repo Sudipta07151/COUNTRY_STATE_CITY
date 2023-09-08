@@ -1,0 +1,32 @@
+.active-link {
+    border-bottom: 0.4rem solid #95b860;
+    text-decoration: none;
+}
+
+img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.header_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 5rem;
+    margin-bottom: 2rem;
+    background-color: white;
+}
+
+a {
+    all: unset;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+li {
+    all: unset;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #cada3b;
+}

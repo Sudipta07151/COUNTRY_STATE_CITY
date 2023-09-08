@@ -1,0 +1,10 @@
+<h2>COUNTRIES</h2>
+<app-filtercard
+  (searchValueEmit)="handleSearchValueEmit($event)"
+  [placeholderValue]="'country name'"
+></app-filtercard>
+<div class="country_wrapper">
+  <ng-container *ngFor="let country of countryList">
+    <app-countrycard [country]="country"></app-countrycard>
+  </ng-container>
+</div>

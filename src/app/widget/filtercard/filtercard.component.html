@@ -1,0 +1,10 @@
+<form [formGroup]="formGroup" (submit)="handleFormSubmit()">
+  <i class="fa fa-search icon"> </i>
+  <input
+    class="fa fa-envelope icon"
+    type="text"
+    formControlName="seachBox"
+    [placeholder]="placeholderValue"
+    #filterInput
+  />
+</form>

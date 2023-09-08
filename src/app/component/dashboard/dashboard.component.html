@@ -1,0 +1,27 @@
+<div class="header_wrapper">
+  <img src="../../../assets/world.svg" alt="" />
+  <h1>COUNTRIES CITIES STATES</h1>
+</div>
+<nav>
+  <ul>
+    <li>
+      <a
+        routerLink="countryhome"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        COUNTRIES
+      </a>
+    </li>
+    <li>
+      <a
+        routerLink="statehome"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        STATES
+      </a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
