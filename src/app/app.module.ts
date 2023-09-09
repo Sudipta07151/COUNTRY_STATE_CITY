@@ -19,6 +19,7 @@ import { RadiocardComponent } from './widget/radiocard/radiocard.component';
 import { StatebycountrycardComponent } from './widget/statebycountrycard/statebycountrycard.component';
 import { IndividualcardComponent } from './component/individualcard/individualcard.component';
 import { LoadersstatusInterceptor } from './interceptor/loadersstatus.interceptor';
+import { CitybycountrycardComponent } from './widget/citybycountrycard/citybycountrycard.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LoadersstatusInterceptor } from './interceptor/loadersstatus.intercepto
     StateofcountriesComponent,
     RadiocardComponent,
     StatebycountrycardComponent,
-    IndividualcardComponent
+    IndividualcardComponent,
+    CitybycountrycardComponent
   ],
   imports: [
     BrowserModule,

@@ -10,5 +10,6 @@ export const environment = {
   country_state_city_api:'https://api.countrystatecity.in/v1',
   countries:'/countries',
   userlist:'/user',
-  states:'/states'
+  states:'/states',
+  cities:'/cities'
 }; 

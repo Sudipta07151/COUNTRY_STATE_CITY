@@ -1,0 +1,7 @@
+<ng-container *ngIf="!city; then nocountry; else showcountry"></ng-container>
+<ng-template #nocountry></ng-template>
+<ng-template #showcountry let city="city">
+  <div class="city_card_wrapper">
+    <p>CITY: {{ city.name }}</p>
+  </div>
+</ng-template>

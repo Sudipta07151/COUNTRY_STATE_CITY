@@ -6,6 +6,7 @@ import { Country } from '../models/country';
 import { State } from '../models/state';
 import { StatebyCountry } from '../models/statebycountry';
 import { Countrysolo } from '../models/countrysolo';
+import { Citybycountry } from '../models/citybycountry';
 
 @Injectable({
   providedIn: 'root'
@@ -45,6 +46,13 @@ export class CountrystatecityService {
   getStateListByCountryISO(iso_code:string):Observable<StatebyCountry[]>{
     const endpoint=environment.country_state_city_api+environment.countries+'/'+iso_code+environment.states
     return this.http.get<StatebyCountry[]>(endpoint,{
+      headers:this.httpHeader
+    });
+  }
+
+  getCityListByCountryISO(iso_code:string):Observable<Citybycountry[]>{
+    const endpoint=environment.country_state_city_api+environment.countries+'/'+iso_code+environment.cities
+    return this.http.get<Citybycountry[]>(endpoint,{
       headers:this.httpHeader
     });
   }

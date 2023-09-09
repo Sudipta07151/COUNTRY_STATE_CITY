@@ -1,15 +1,30 @@
-<h1>COUNTRY</h1>
 <ng-container *ngIf="!country; then nocountry; else showcountry"></ng-container>
 <ng-template #nocountry>
   <div>NO COUNTRY</div>
 </ng-template>
 <ng-template #showcountry let country="country">
-  <div class="country_card_wrapper">
-    <p>COUNTRY: {{ country.name }}</p>
-    <p>CURRENCY: {{ country.currency }}</p>
-    <p>CAPITAL: {{ country.capital }}</p>
-    <p>PHONE-CODE: {{ country.phonecode }}</p>
-    <p>FLAG: {{ country.emoji }}</p>
-    <p>ISO: {{ country.iso2 }}</p>
+  <h1>
+    COUNTRY | STATE {{ stateListByCountry.length }} | CITIES
+    {{ cityListByCountry.length }}
+  </h1>
+  <div class="wrapper">
+    <div class="country_card_wrapper">
+      <p>COUNTRY: {{ country.name }}</p>
+      <p>CURRENCY: {{ country.currency }}</p>
+      <p>CAPITAL: {{ country.capital }}</p>
+      <p>PHONE-CODE: {{ country.phonecode }}</p>
+      <p>FLAG: {{ country.emoji }}</p>
+      <p>ISO: {{ country.iso2 }}</p>
+    </div>
+    <div class="state_wrapper">
+      <ng-container *ngFor="let state of stateListByCountry">
+        <app-statebycountrycard [state]="state"></app-statebycountrycard>
+      </ng-container>
+    </div>
+    <div class="state_wrapper">
+      <ng-container *ngFor="let city of cityListByCountry">
+        <app-citybycountrycard [city]="city"></app-citybycountrycard>
+      </ng-container>
+    </div>
   </div>
 </ng-template>
