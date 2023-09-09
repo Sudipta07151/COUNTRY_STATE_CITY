@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { UsercardwidgetComponent } from './widget/usercardwidget/usercardwidget.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CountrycardComponent } from './widget/countrycard/countrycard.component';
 import { UsershomeComponent } from './component/usershome/usershome.component';
 import { CountryhomeComponent } from './component/countryhome/countryhome.component';
@@ -18,7 +18,7 @@ import { StateofcountriesComponent } from './component/stateofcountries/stateofc
 import { RadiocardComponent } from './widget/radiocard/radiocard.component';
 import { StatebycountrycardComponent } from './widget/statebycountrycard/statebycountrycard.component';
 import { IndividualcardComponent } from './component/individualcard/individualcard.component';
-
+import { LoadersstatusInterceptor } from './interceptor/loadersstatus.interceptor';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,7 @@ import { IndividualcardComponent } from './component/individualcard/individualca
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS,useClass:LoadersstatusInterceptor,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

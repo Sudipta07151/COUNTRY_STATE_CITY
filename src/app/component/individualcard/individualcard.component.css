@@ -13,12 +13,3 @@ p {
     text-overflow: ellipsis;
     overflow: hidden;
 }
-
-.country_card_wrapper:hover {
-    transform: scale(1.1);
-    z-index: 99;
-    background-color: #888888;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}

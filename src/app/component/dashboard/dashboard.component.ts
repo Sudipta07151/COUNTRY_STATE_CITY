@@ -20,25 +20,7 @@ export class DashboardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getUserList()
+    
   }
-
-  getUserList(){
-    this.userList=[];
-    this.usersService.getUserList().subscribe(
-      (data:User[])=>{
-        this.userList=data;
-        console.log('USERLIST FETCHED: ',this.userList);
-      },
-      (err)=>{
-        this.userList=[]
-        console.log('USERLIST ERROR: ',this.userList,err);
-      },
-      ()=>{
-        console.log('USER LIST FETECHED SUCCESSFULLY')
-      }
-    )
-  }
-
 
 }

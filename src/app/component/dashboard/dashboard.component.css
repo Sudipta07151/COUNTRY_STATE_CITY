@@ -30,3 +30,12 @@ li {
     padding-bottom: 1rem;
     background-color: #cada3b;
 }
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    background-color: #a6a6a6;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
