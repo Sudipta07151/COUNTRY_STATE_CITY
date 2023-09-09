@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Country } from '../models/country';
 import { State } from '../models/state';
 import { StatebyCountry } from '../models/statebycountry';
+import { Countrysolo } from '../models/countrysolo';
 
 @Injectable({
   providedIn: 'root'
@@ -27,9 +28,9 @@ export class CountrystatecityService {
     });
   }
 
-  getCountry(country_iso2:string):Observable<Country>{
-    const endpoint=environment.country_state_city_api+environment.countries+country_iso2
-    return this.http.get<Country>(endpoint,{
+  getCountry(country_iso2:string):Observable<Countrysolo>{
+    const endpoint=environment.country_state_city_api+environment.countries+'/'+country_iso2
+    return this.http.get<Countrysolo>(endpoint,{
       headers:this.httpHeader
     });
   }

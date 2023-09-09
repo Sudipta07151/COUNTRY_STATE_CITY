@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Country } from 'src/app/models/country';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-countrycard',
@@ -8,10 +10,14 @@ import { Country } from 'src/app/models/country';
 })
 export class CountrycardComponent implements OnInit {
 
-  @Input() country!:any;
-  constructor() { }
+  @Input() country!:Country;
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  clickCard(iso_code:string){
+    const endppoint=`countryhome/country/${iso_code}`
+    this.router.navigateByUrl(endppoint);
+  }
 }

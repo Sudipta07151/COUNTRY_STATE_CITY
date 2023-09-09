@@ -17,6 +17,7 @@ import { DropdowncardComponent } from './widget/dropdowncard/dropdowncard.compon
 import { StateofcountriesComponent } from './component/stateofcountries/stateofcountries.component';
 import { RadiocardComponent } from './widget/radiocard/radiocard.component';
 import { StatebycountrycardComponent } from './widget/statebycountrycard/statebycountrycard.component';
+import { IndividualcardComponent } from './component/individualcard/individualcard.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { StatebycountrycardComponent } from './widget/statebycountrycard/stateby
     DropdowncardComponent,
     StateofcountriesComponent,
     RadiocardComponent,
-    StatebycountrycardComponent
+    StatebycountrycardComponent,
+    IndividualcardComponent
   ],
   imports: [
     BrowserModule,
